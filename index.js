@@ -6,6 +6,7 @@ const drumBtns = document.querySelectorAll(".drum");
 
 for (let i = 0; i < drumBtns.length; i++) {
     drumBtns[i].addEventListener("click", function() {
-        console.log("I got clicked!");
+        var audio = new Audio("sounds/tom-1.mp3");
+        audio.play();
     })
 }
