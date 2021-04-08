@@ -44,3 +44,7 @@ for (let i = 0; i < drumBtns.length; i++) {
         }
     })
 }
+
+document.addEventListener("keydown", function() {
+    alert("Key was pressed!");
+})
