@@ -45,6 +45,6 @@ for (let i = 0; i < drumBtns.length; i++) {
     })
 }
 
-document.addEventListener("keydown", function() {
-    alert("Key was pressed!");
+document.addEventListener("keydown", function(event) {
+    console.log(event);
 })
