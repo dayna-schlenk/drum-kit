@@ -1,10 +1,20 @@
+// Detecting button press
 const drumBtns = document.querySelectorAll(".drum");
 
 for (let i = 0; i < drumBtns.length; i++) {
     drumBtns[i].addEventListener("click", function() {
         var buttonInnerHTML = this.innerHTML;
+        makeSound(buttonInnerHTML);
+    })
+}
 
-        switch (buttonInnerHTML) {
+// Detecting keyboard press
+document.addEventListener("keydown", function(event) {
+    makeSound(event.key);
+})
+
+function makeSound(key) {
+    switch (key) {
             case "w":
                 var tom1 = new Audio("sounds/tom-1.mp3");
                 tom1.play();
@@ -42,9 +52,4 @@ for (let i = 0; i < drumBtns.length; i++) {
         
             default: console.log(buttonInnerHTML);
         }
-    })
 }
-
-document.addEventListener("keydown", function(event) {
-    console.log(event);
-})
